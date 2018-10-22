@@ -6,10 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded_1">
 
     <Grid>
-        <TextBlock x:Name="TimerLog" HorizontalAlignment="Left" Margin="507,736,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TimerLog" 
+                   HorizontalAlignment="Left" 
+                   Margin="10,51,0,0" 
+                   Text="TextBlock" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" Height="879" Width="1432"/>
 
     </Grid>
 </Page>
