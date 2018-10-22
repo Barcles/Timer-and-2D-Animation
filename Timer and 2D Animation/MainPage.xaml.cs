@@ -71,5 +71,30 @@ namespace Timer_and_2D_Animation
         {
             DispatcherTimerSetup();
         }
+
+        
+        var path1 = new Windows.UI.Xaml.Shapes.Path();
+        path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));
+        path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Black);
+        path1.StrokeThickness = 1;
+
+        void ellipse()
+        {
+            var ellipseGeometry1 = new EllipseGeometry();
+            ellipseGeometry1.Center = new Point(100, 100);
+            ellipseGeometry1.RadiusX = 20;
+            ellipseGeometry1.RadiusY = 30;
+            geometryGroup1.Children.Add(ellipseGeometry1);
+        }
+
+
+        geometryGroup1.Children.Add(pathGeometry1);
+        path1.Data = geometryGroup1;
+
+        // When you create a XAML element in code, you have to add
+        // it to the XAML visual tree. This example assumes you have
+        // a panel named 'layoutRoot' in your XAML file, like this:
+        // <Grid x:Name="layoutRoot>
+        Relative_Panel1.Children.Add(path1);
     }
 }

@@ -15,14 +15,12 @@
                    Text="TextBlock" 
                    TextWrapping="Wrap" 
                    VerticalAlignment="Top" Height="879" Width="1432"/>
-        <RelativePanel HorizontalAlignment="Left" 
+        <RelativePanel x:Name="Relative_Panel1" 
+                       HorizontalAlignment="Left" 
                        Height="1000" 
                        VerticalAlignment="Center" 
                        Width="1490" 
                        Margin="0,0,0,0">
-            <Ellipse Fill="SteelBlue"
-                     Height="200"
-                     Width="200"/>
         </RelativePanel>
 
     </Grid>
