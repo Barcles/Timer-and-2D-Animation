@@ -39,13 +39,13 @@ namespace Timer_and_2D_Animation
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1/5);
             //IsEnabled defaults to false
-            TimerLog.Text += "dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n";
+            //TimerLog.Text += "dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n";
             startTime = DateTimeOffset.Now;
             lastTime = startTime;
-            TimerLog.Text += "Calling dispatcherTimer.Start()\n";
+            //TimerLog.Text += "Calling dispatcherTimer.Start()\n";
             dispatcherTimer.Start();
             //IsEnabled should now be true after calling start
-            TimerLog.Text += "dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n";
+            //TimerLog.Text += "dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n";
         }
 
         void dispatcherTimer_Tick(object sender, object e)
@@ -54,7 +54,7 @@ namespace Timer_and_2D_Animation
             TimeSpan span = time - lastTime;
             lastTime = time;
             //Time since last tick should be very very close to Interval
-            TimerLog.Text += timesTicked + "\t time since last tick: " + span.ToString() + "\n";
+            //TimerLog.Text += timesTicked + "\t time since last tick: " + span.ToString() + "\n";
             timesTicked++;
             //if (timesTicked > timesToTick)
             //{
