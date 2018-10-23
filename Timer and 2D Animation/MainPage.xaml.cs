@@ -141,9 +141,65 @@ namespace Timer_and_2D_Animation
             {
                 speedY += 2;
             }
-            if(speedY < 0)  //f speedY variable is positive, only decrements speed with negative number
+            if(speedY < 0)  // If speedY variable is positive, only decrements speed with negative number
             {
                 speedY -= 2;
+            }
+        }
+
+        private void Decrease_Speed_Click(object sender, RoutedEventArgs e)
+        {
+            if (speedX > 0)  // If speedX variable is positive, only increments speed with positive number
+            {
+                speedX -= 2;
+                if(speedX <= 0) // Prevents ellipse from changing direction
+                {
+                    speedX = 1;
+                }
+            }
+            if (speedX < 0)  // If speedX variable is negative, only decrements speed with negative number
+            {
+                speedX += 2;
+                if(speedX >= 0) // Prevents ellipse from changing direction
+                {
+                    speedX = -1;
+                }
+            }
+            if (speedY > 0)  // If speedY variable is positive, only increments speed with positive number
+            {
+                speedY -= 2;
+                if(speedY <= 0) // Prevents ellipse from changing direction
+                {
+                    speedY = 1;
+                }
+            }
+            if (speedY < 0)  // If speedY variable is positive, only decrements speed with negative number
+            {
+                speedY += 2;
+                if(speedY >= 0) // Prevents ellipse from changing direction
+                {
+                    speedY = -1;
+                }
+            }
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)  // Reset button for speed, changes X & Y values back to 10 without changing direction
+        {
+            if(speedX > 0)
+            {
+                speedX = 10;
+            }
+            if(speedY > 0)
+            {
+                speedY = 10;
+            }
+            if (speedX < 0)
+            {
+                speedX = -10;
+            }
+            if(speedY < 0)
+            {
+                speedY = -10;
             }
         }
     }

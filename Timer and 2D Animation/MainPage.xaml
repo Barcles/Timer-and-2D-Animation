@@ -28,6 +28,24 @@
                 HorizontalAlignment="Left" 
                 Height="51" 
                 VerticalAlignment="Top" 
-                Width="117" Click="Increase_Speed_Click" Margin="10,10,0,0"/>
+                Width="117" 
+                Click="Increase_Speed_Click" 
+                Margin="10,10,0,0"/>
+        <Button x:Name="Decrease_Speed" 
+                Content="Speed-" 
+                HorizontalAlignment="Left" 
+                Height="51" 
+                VerticalAlignment="Top" 
+                Width="117" 
+                Click="Decrease_Speed_Click" 
+                Margin="132,10,0,0"/>
+        <Button x:Name="Reset" 
+                Content="Reset" 
+                HorizontalAlignment="Left" 
+                Height="51" 
+                VerticalAlignment="Top" 
+                Width="117" 
+                Click="Reset_Click" 
+                Margin="254,10,0,0"/>
     </Grid>
 </Page>
