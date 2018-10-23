@@ -32,10 +32,11 @@ namespace Timer_and_2D_Animation
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 10;
-        int posX;
-        int posY;
-        int speedX;
-        int speedY;
+        int posX = 200;
+        int posY = 200;
+        int speedX = 20;
+        int speedY = 20;
+        int radius = 60;
 
         public void DispatcherTimerSetup()
         {
@@ -101,7 +102,25 @@ namespace Timer_and_2D_Animation
             // <Grid x:Name="layoutRoot>
             Relative_Panel1.Children.Add(path1);
 
-            if
+            posX += speedX;
+            posY += speedY;
+
+            if(posX + radius > Relative_Panel1.ActualWidth)
+            {
+                speedX *= -1;
+            }
+            if(posY + radius > Relative_Panel1.ActualHeight)
+            {
+                speedY *= -1;
+            }
+            if(posX - radius < 0)
+            {
+                speedX *= -1;
+            }
+            if(posY - radius < 0)
+            {
+                speedY *= -1;
+            }
         }
 
 
