@@ -70,24 +70,22 @@ namespace Timer_and_2D_Animation
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             DispatcherTimerSetup();
+            ellipse();
         }
-
-        
-
 
         void ellipse()
         {
             var geometryGroup1 = new GeometryGroup();
             var pathGeometry1 = new PathGeometry();
             var path1 = new Windows.UI.Xaml.Shapes.Path();
-            path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));    // Color of Ellipse
-            path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Yellow);
+            path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));    // Fill color of Ellipse
+            path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Yellow);   // Outline color of Ellipse
             path1.StrokeThickness = 1;
 
             var ellipseGeometry1 = new EllipseGeometry();
-            ellipseGeometry1.Center = new Point(100, 100);  
-            ellipseGeometry1.RadiusX = 20;
-            ellipseGeometry1.RadiusY = 30;
+            ellipseGeometry1.Center = new Point(200, 200);  // Position of center of ellipse on relative panel
+            ellipseGeometry1.RadiusX = 60;  // X component of Ellipse size
+            ellipseGeometry1.RadiusY = 60;  // Y component of Ellipse size
             geometryGroup1.Children.Add(ellipseGeometry1);
 
             geometryGroup1.Children.Add(pathGeometry1);
