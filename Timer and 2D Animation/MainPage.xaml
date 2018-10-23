@@ -24,5 +24,10 @@
                        RequestedTheme="Default">
         </RelativePanel>
 
+        <Button x:Name="Increase_Speed" Content="Speed+" 
+                HorizontalAlignment="Left" 
+                Height="51" 
+                VerticalAlignment="Top" 
+                Width="117" Click="Increase_Speed_Click" Margin="10,10,0,0"/>
     </Grid>
 </Page>

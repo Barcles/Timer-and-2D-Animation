@@ -126,5 +126,11 @@ namespace Timer_and_2D_Animation
             }
 
         }
+
+        public void Increase_Speed_Click(object sender, RoutedEventArgs e)
+        {
+            speedX += 2;
+            speedY += 2;
+        }
     }
 }
