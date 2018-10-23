@@ -35,8 +35,8 @@ namespace Timer_and_2D_Animation
 
         int posX = 100;
         int posY = 100;
-        int speedX = 20;
-        int speedY = 20;
+        int speedX = 10;
+        int speedY = 10;
         int radius = 60;
 
         public void DispatcherTimerSetup()
@@ -72,8 +72,8 @@ namespace Timer_and_2D_Animation
             //    span = stopTime - startTime;
             //    TimerLog.Text += "Total Time Start-Stop: " + span.ToString() + "\n";
             //}
-
-            ellipse();
+            Relative_Panel1.Children.Clear();   // Clears Relative panel to prevent previous image from showing
+            ellipse();  // Calls ellipse drawing and changes position
         }
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
@@ -86,7 +86,7 @@ namespace Timer_and_2D_Animation
             var pathGeometry1 = new PathGeometry();
 
             var path1 = new Windows.UI.Xaml.Shapes.Path();
-            path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));    // Fill color of Ellipse
+            path1.Fill = new SolidColorBrush(Windows.UI.Colors.Yellow);    // Fill color of Ellipse
             path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Yellow);   // Outline color of Ellipse
             path1.StrokeThickness = 1;
 
@@ -105,26 +105,26 @@ namespace Timer_and_2D_Animation
             // <Grid x:Name="layoutRoot>
             Relative_Panel1.Children.Add(path1);
 
-            posX += speedX;
-            posY += speedY;
+            posX += speedX; // Allows x-axis position to change based on speed component
+            posY += speedY; // Allows y-axis position to change based on speed component
 
-                if (posX + radius > Relative_Panel1.ActualWidth) // Change direction on x-axis if ellipse radius + position hits edge of relative panel
-                {
-                    speedX *= -1;
-                }
-                if (posY + radius > Relative_Panel1.ActualHeight)    // Change direction on y-axis if ellipse radius + position hits edge of relative panel
-                {
-                    speedY *= -1;
-                }
-                if (posX - radius < 0)
-                {
-                    speedX *= -1;
-                }
-                if (posY - radius < 0)
-                {
-                    speedY *= -1;
-                }
-                
+            if (posX + radius > Relative_Panel1.ActualWidth) // Change direction on x-axis if ellipse radius + position hits edge of relative panel
+            {
+                speedX *= -1;
+            }
+            if (posY + radius > Relative_Panel1.ActualHeight)    // Change direction on y-axis if ellipse radius + position hits edge of relative panel
+            {
+                speedY *= -1;
+            }
+            if (posX - radius < 0)
+            {
+                speedX *= -1;
+            }
+            if (posY - radius < 0)
+            {
+                speedY *= -1;
+            }
+
         }
     }
 }

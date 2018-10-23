@@ -12,7 +12,7 @@
         <TextBlock x:Name="TimerLog" 
                    HorizontalAlignment="Left" 
                    Margin="10,51,0,0" 
-                   Text="TextBlock" 
+                   Text="" 
                    TextWrapping="Wrap" 
                    VerticalAlignment="Top" Height="523" Width="644"/>
         <RelativePanel x:Name="Relative_Panel1" 
