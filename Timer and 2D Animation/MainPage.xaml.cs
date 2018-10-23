@@ -72,11 +72,12 @@ namespace Timer_and_2D_Animation
             //    span = stopTime - startTime;
             //    TimerLog.Text += "Total Time Start-Stop: " + span.ToString() + "\n";
             //}
+
+            ellipse();
         }
         private void Page_Loaded_1(object sender, RoutedEventArgs e)
         {
             DispatcherTimerSetup();
-            ellipse();
         }
 
         void ellipse()
@@ -107,23 +108,23 @@ namespace Timer_and_2D_Animation
             posX += speedX;
             posY += speedY;
 
-            if(posX + radius > Relative_Panel1.ActualWidth) // Chnage direction on x-axis if ellipse radius + position hits edge of relative panel
-            {
-                speedX *= -1;
-            }
-            if(posY + radius > Relative_Panel1.ActualHeight)    // Chnage direction on y-axis if ellipse radius + position hits edge of relative panel
-            {
-                speedY *= -1;
-            }
-            if(posX - radius < 0)
-            {
-                speedX *= -1;
-            }
-            if(posY - radius < 0)
-            {
-                speedY *= -1;
-            }
+                if (posX + radius > Relative_Panel1.ActualWidth) // Change direction on x-axis if ellipse radius + position hits edge of relative panel
+                {
+                    speedX *= -1;
+                }
+                if (posY + radius > Relative_Panel1.ActualHeight)    // Change direction on y-axis if ellipse radius + position hits edge of relative panel
+                {
+                    speedY *= -1;
+                }
+                if (posX - radius < 0)
+                {
+                    speedX *= -1;
+                }
+                if (posY - radius < 0)
+                {
+                    speedY *= -1;
+                }
+                
         }
-
     }
 }
