@@ -116,11 +116,11 @@ namespace Timer_and_2D_Animation
             {
                 speedY *= -1;
             }
-            if (posX - radius < 0)
+            if (posX - radius < 0)  // Change direction on x-axis if relative panel boundary is reached
             {
                 speedX *= -1;
             }
-            if (posY - radius < 0)
+            if (posY - radius < 0)  // Change direction on y-axis if relative panel boundary is reached
             {
                 speedY *= -1;
             }
@@ -183,7 +183,7 @@ namespace Timer_and_2D_Animation
             }
         }
 
-        private void Reset_Click(object sender, RoutedEventArgs e)  // Reset button for speed, changes X & Y values back to 10 without changing direction
+        private void Reset_Click(object sender, RoutedEventArgs e)  // Reset button for radius and speed, changes X & Y values back to 10 without changing direction
         {
             if(speedX > 0)
             {
@@ -200,6 +200,25 @@ namespace Timer_and_2D_Animation
             if(speedY < 0)
             {
                 speedY = -10;
+            }
+            radius = 60;
+        }
+
+        private void SizePlus_Click(object sender, RoutedEventArgs e)   // Increase size of ellipse
+        {
+            radius+= 5;
+            if(radius >= 400)   // Prevents ellipse size from increasing past 400
+            {
+                radius = 395;
+            }
+        }
+
+        private void SizeMinus_Click(object sender, RoutedEventArgs e)  // Decreases size of ellipse
+        {
+            radius -= 5;
+            if(radius <= 0) // Prevents ellipse size from decreasing past 5
+            {
+                radius = 5;
             }
         }
     }

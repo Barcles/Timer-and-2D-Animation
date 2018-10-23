@@ -46,6 +46,22 @@
                 VerticalAlignment="Top" 
                 Width="117" 
                 Click="Reset_Click" 
-                Margin="254,10,0,0"/>
+                Margin="498,10,0,0"/>
+        <Button x:Name="SizeMinus" 
+            Content="Size-" 
+            HorizontalAlignment="Left" 
+            Height="51" 
+            VerticalAlignment="Top" 
+            Width="117" 
+            Click="SizeMinus_Click" 
+            Margin="376,10,0,0"/>
+        <Button x:Name="SizePlus" 
+            Content="Size+" 
+            HorizontalAlignment="Left" 
+            Height="51" 
+            VerticalAlignment="Top" 
+            Width="117" 
+            Click="SizePlus_Click" 
+            Margin="254,10,0,0"/>
     </Grid>
 </Page>
