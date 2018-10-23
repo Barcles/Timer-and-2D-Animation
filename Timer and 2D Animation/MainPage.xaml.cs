@@ -127,10 +127,24 @@ namespace Timer_and_2D_Animation
 
         }
 
-        public void Increase_Speed_Click(object sender, RoutedEventArgs e)
+        public void Increase_Speed_Click(object sender, RoutedEventArgs e)  // Button to increase speed on ellipse
         {
-            speedX += 2;
-            speedY += 2;
+            if(speedX > 0)  // If speedX variable is positive, only increments speed with positive number
+            {
+                speedX += 2;
+            }
+            if(speedX < 0)  // If speedX variable is negative, only decrements speed with negative number
+            {
+                speedX -= 2;
+            }
+            if(speedY > 0)  // If speedY variable is positive, only increments speed with positive number
+            {
+                speedY += 2;
+            }
+            if(speedY < 0)  //f speedY variable is positive, only decrements speed with negative number
+            {
+                speedY -= 2;
+            }
         }
     }
 }
