@@ -32,6 +32,10 @@ namespace Timer_and_2D_Animation
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 10;
+        int posX;
+        int posY;
+        int speedX;
+        int speedY;
 
         public void DispatcherTimerSetup()
         {
@@ -96,6 +100,8 @@ namespace Timer_and_2D_Animation
             // a panel named 'layoutRoot' in your XAML file, like this:
             // <Grid x:Name="layoutRoot>
             Relative_Panel1.Children.Add(path1);
+
+            if
         }
 
 
