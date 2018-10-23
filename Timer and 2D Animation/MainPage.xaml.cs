@@ -32,8 +32,9 @@ namespace Timer_and_2D_Animation
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 10;
-        int posX = 200;
-        int posY = 200;
+
+        int posX = 100;
+        int posY = 100;
         int speedX = 20;
         int speedY = 20;
         int radius = 60;
@@ -82,15 +83,16 @@ namespace Timer_and_2D_Animation
         {
             var geometryGroup1 = new GeometryGroup();
             var pathGeometry1 = new PathGeometry();
+
             var path1 = new Windows.UI.Xaml.Shapes.Path();
             path1.Fill = new SolidColorBrush(Windows.UI.Color.FromArgb(255, 204, 204, 255));    // Fill color of Ellipse
             path1.Stroke = new SolidColorBrush(Windows.UI.Colors.Yellow);   // Outline color of Ellipse
             path1.StrokeThickness = 1;
 
             var ellipseGeometry1 = new EllipseGeometry();
-            ellipseGeometry1.Center = new Point(200, 200);  // Position of center of ellipse on relative panel
-            ellipseGeometry1.RadiusX = 60;  // X component of Ellipse size
-            ellipseGeometry1.RadiusY = 60;  // Y component of Ellipse size
+            ellipseGeometry1.Center = new Point(posX, posY);  // Position of center of ellipse on relative panel
+            ellipseGeometry1.RadiusX = radius;  // X component of Ellipse size
+            ellipseGeometry1.RadiusY = radius;  // Y component of Ellipse size
             geometryGroup1.Children.Add(ellipseGeometry1);
 
             geometryGroup1.Children.Add(pathGeometry1);
@@ -105,11 +107,11 @@ namespace Timer_and_2D_Animation
             posX += speedX;
             posY += speedY;
 
-            if(posX + radius > Relative_Panel1.ActualWidth)
+            if(posX + radius > Relative_Panel1.ActualWidth) // Chnage direction on x-axis if ellipse radius + position hits edge of relative panel
             {
                 speedX *= -1;
             }
-            if(posY + radius > Relative_Panel1.ActualHeight)
+            if(posY + radius > Relative_Panel1.ActualHeight)    // Chnage direction on y-axis if ellipse radius + position hits edge of relative panel
             {
                 speedY *= -1;
             }
@@ -122,8 +124,6 @@ namespace Timer_and_2D_Animation
                 speedY *= -1;
             }
         }
-
-
 
     }
 }
