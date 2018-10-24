@@ -84,6 +84,35 @@ namespace Timer_and_2D_Animation
         {
             var geometryGroup1 = new GeometryGroup();
             var pathGeometry1 = new PathGeometry();
+            //int ColorChange = 0;
+
+            //switch(ColorChange)
+            //{
+            //    case 0:
+            //        Windows.UI.Colors.Yellow;
+            //        ColorChange += 1;
+            //        break;
+
+            //    case 1:
+            //        Windows.UI.Colors.Green;
+            //        ColorChange += 1;
+            //        break;
+
+            //    case 2:
+            //        Windows.UI.Colors.Purple;
+            //        ColorChange += 1;
+            //        break;
+
+            //    case 3:
+            //        Windows.UI.Colors.Blue;
+            //        ColorChange += 1;
+            //        break;
+
+            //    default:
+            //        Windows.UI.Colors.Red;
+            //        ColorChange = 0;
+            //        break;
+            //}
 
             var path1 = new Windows.UI.Xaml.Shapes.Path();
             path1.Fill = new SolidColorBrush(Windows.UI.Colors.Yellow);    // Fill color of Ellipse
